@@ -1,0 +1,78 @@
+<div class="container">
+<div class="main-video">
+<div class="video">
+    <video src="lesson20.mp4" controls autoplay onselectstart="return false;"></video>
+    <h3 class="title">01. video title django </h3>
+</div>
+</div>
+<div class="video-list" >
+    <!--  -->
+    <div class="vid active">
+        <video src="lesson20.mp4" ></video>
+    <h3 class="title">01. video title django </h3>
+    </div>
+    <!--  -->
+    <div class="vid">
+        <video src="lesson12.mp4" ></video>
+    <h3 class="title">02. video title django </h3>
+    </div>
+    <!--  -->
+    <div class="vid">
+        <video src="lesson20.mp4" ></video>
+    <h3 class="title">03. video title django </h3>
+    </div>
+    <!--  -->
+    <div class="vid">
+        <video src="lesson20.mp4" ></video>
+    <h3 class="title">04. video title django </h3>
+    </div>
+    <!--  -->
+    <div class="vid">
+        <video src="lesson20.mp4" ></video>
+    <h3 class="title">05. video title django </h3>
+    </div>
+    <!--  -->
+    <div class="vid">
+        <video src="lesson20.mp4" ></video>
+    <h3 class="title">06. video title django </h3>
+    </div>
+    <div class="vid">
+        <video src="lesson20.mp4" ></video>
+    <h3 class="title">07. video title django </h3>
+    </div>
+</div>
+</div>
+<script>
+    let listVideo = document.querySelectorAll('.video-list .vid');
+    let mainVideo = document.querySelector('.main-video video');
+    let title = document.querySelector('.main-vide .title');
+    listVideo.forEach(video => {
+      video.onclick = () =>{
+        listVideo.forEach(vid => vid.classList.remove('active'));
+        video.classList.add('active');
+        if(video.classList.contains('active')){
+         let src = video.children[0].getAttribute('src');
+         mainVideo.src = src;
+        };
+      };
+    });
+</script>
+
+
+<div class="course">
+    <img src="assets/images/course1.png"  alt="Course 1">
+    <div class="course-content">
+        <div class="course-title">Titre du Cours 1</div>
+        <div class="stars">★★★★★</div>
+        <div class="price">$19.99</div>
+    </div>
+</div>
+
+<div class="course">
+    <img src="course2.jpg" alt="Course 2">
+    <div class="course-content">
+        <div class="course-title">Titre du Cours 2</div>
+        <div class="stars">★★★☆☆</div>
+        <div class="price">$29.99</div>
+    </div>
+</div>
